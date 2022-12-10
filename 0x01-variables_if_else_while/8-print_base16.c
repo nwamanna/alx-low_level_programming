@@ -6,12 +6,12 @@
  */
 int main(void)
 {
-	char i = '0';
-	char k = 'a';
+	char i;
+	char k;
 
-	for (i; i <= '9'; i++)
+	for (i = '0'; i <= '9'; i++)
 		putchar(i);
-	for (k; k <= 'f'; k++)
+	for (k = 'a'; k <= 'f'; k++)
 		putchar(k);
 	putchar('\n');
 	return (0);
