@@ -1,19 +1,19 @@
 #include <stdio.h>
 /**
 *_abs- prints absolute value
-*@int: the parameter
+*@num: the parameter
 *
 *Return: r if suceesful
 */
-int _abs(int)
+int _abs(int num)
 {
-	if (int < 0)
+	if (num < 0)
 	{
-		int  r = int * -2;
-		int k = r + int;
+		int  r = num * -2;
+		int k = r + num;
 
-		return (k);
+		return k;
 	}
 	else
-		return (int);
+		return num;
 }
