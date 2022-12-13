@@ -9,8 +9,9 @@
 
 int main(void)
 {   
-    _putchar(95, 112, 117, 116);
-    putchar(10);
+	_putchar(95, 112, 117, 116);
+	_putchar(99, 104, 97, 114);
+	putchar('\n');
 
     
     return (0);
