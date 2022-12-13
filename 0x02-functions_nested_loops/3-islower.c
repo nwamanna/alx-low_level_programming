@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
 *_islower - chose only lower letter
 *@c: parameter
