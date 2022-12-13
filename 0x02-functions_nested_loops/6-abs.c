@@ -12,8 +12,8 @@ int _abs(int num)
 		int  r = num * -2;
 		int k = r + num;
 
-		return k;
+		return (k);
 	}
 	else
-		return num;
+		return (num);
 }
