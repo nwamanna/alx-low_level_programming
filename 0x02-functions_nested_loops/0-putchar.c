@@ -10,7 +10,6 @@
 int main(void)
 {   
     _putchar(95, 112, 117, 116);
-    _putchar(99, 104, 97, 114);
     putchar(10);
 
     
