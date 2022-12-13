@@ -7,13 +7,13 @@
 */
 int _abs(int)
 {
-	if (num < 0)
+	if (int < 0)
 	{
-		int  r = num * -2;
-		int k = r + num;
+		int  r = int * -2;
+		int k = r + int;
 
 		return (k);
 	}
 	else
-		return (num);
+		return (int);
 }
