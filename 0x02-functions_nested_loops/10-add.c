@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
 *add - add nums
-@i: first parameter
+*@i: first parameter
 *@j: second parameter
 *
 *Return: sum
