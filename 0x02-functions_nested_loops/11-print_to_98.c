@@ -1,4 +1,4 @@
-#include <stdio>
+#include <stdio.h>
 /**
 *print_to_98 - print numbers
 *@n: parameter
