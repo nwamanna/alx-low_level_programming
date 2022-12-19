@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * _puts - value of a to b and b to a
  * @str: pointer to an string
@@ -8,11 +9,10 @@
 void _puts(char *str)
 {
 	int i;
-	int sum = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		char k = s[i];
+		char k = str[i];
 
 		_putchar(k);
 	}
