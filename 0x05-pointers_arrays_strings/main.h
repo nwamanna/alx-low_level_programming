@@ -1,3 +1,4 @@
+void rev_string(char *s);
 void puts2(char *str);
 char *_strcpy(char *dest, char *src);
 void reset_to_98(int *n);
