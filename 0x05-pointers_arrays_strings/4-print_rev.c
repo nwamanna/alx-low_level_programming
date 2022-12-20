@@ -1,20 +1,21 @@
 #include <stdio.h>
-#include "main.h"
+#include"main.h"
 /**
- * print_rev - value of a to b and b to a
- * @s: pointer to an string
- *
- * Return: Void
- */
+*print_rev - reverse the string
+*@s: parameter string
+*/
 void print_rev(char *s)
 {
 	int i;
+	int j;
 
-	for (i = _strlen(s) - 1; s[i] != '\0'; i--)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		char k = s[i];
-
-		_putchar(k);
 	}
-	_putchar(10);
+
+	for (j = i - 1; j >= 0; j--)
+	{
+		_putchar((s[j]);
+	}
+	_putchar('\n');
 }
