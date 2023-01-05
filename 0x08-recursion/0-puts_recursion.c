@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include "main.h"
+/**
+* _puts_recursion - prints out the letters in a string
+*@s: the pointer to the string
+*
+*Return: Void
+*/
+void _puts_recursion(char *s)
+{
+	if (s == '\0')
+	{
+		_putchar(10);
+	}
+	_putchar(*s);
+	_puts_recursion(*(s + 1));
+}
