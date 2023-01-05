@@ -6,7 +6,7 @@
 *
 *Return: integer, number of lettersin a string
 */
-int _strlen_recursion(char *s);
+int _strlen_recursion(char *s)
 {
 	if (*s == '\0')
 	{
