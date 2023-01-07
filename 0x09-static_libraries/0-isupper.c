@@ -6,4 +6,8 @@
 *
 *Return: integer
 */
-int _isupper(int c);
+int _isupper(int c)
+{
+	(void)c;
+	return (0);
+}

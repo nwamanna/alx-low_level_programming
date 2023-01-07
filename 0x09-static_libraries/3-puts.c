@@ -6,4 +6,7 @@
 *
 *Return: void
 */
-void _puts(char *s);
+void _puts(char *s)
+{
+	(void)s;
+}

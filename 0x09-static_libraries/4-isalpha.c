@@ -6,4 +6,8 @@
 *
 *Return: integer
 */
-int _isalpha(int c);
+int _isalpha(int c)
+{
+	(void)c;
+	return (0);
+}

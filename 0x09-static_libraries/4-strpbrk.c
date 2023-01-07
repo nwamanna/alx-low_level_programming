@@ -7,4 +7,9 @@
 *
 *Return: integer
 */
-char *_strpbrk(char *s, char *accept);
+char *_strpbrk(char *s, char *accept)
+{
+	(void)s;
+	(void)accept;
+	return (s);
+}

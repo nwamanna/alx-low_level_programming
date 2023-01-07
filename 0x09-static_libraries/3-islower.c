@@ -6,4 +6,8 @@
 *
 *Return: integer
 */
-int _islower(int c);
+int _islower(int c)
+{
+	(void)c;
+	return (0);
+}

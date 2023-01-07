@@ -6,4 +6,8 @@
 *
 *Return: integer
 */
-int _isdigit(int c);
+int _isdigit(int c)
+{
+	(void)c;
+	return (0);
+}
