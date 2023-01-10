@@ -1,25 +1,23 @@
+#include "main.h"
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
- * print_school - prints "Holberton"
+ * main - check the code for ALX School students.
  *
- * Return: nothing.
- */
-void print_school(void)
-{
-    char str[] = "Holberton";
-
-    str[0] = 's';
-    printf("%s\n", str);
-}
-
-/**
- *  main - concept introduction
- *
- * Return: 0.
+ * Return: Always 0.
  */
 int main(void)
 {
-    print_school();
+    char *s;
+
+    s = _strdup("ALX SE");
+    if (s == NULL)
+    {
+        printf("failed to allocate memory\n");
+        return (1);
+    }
+    printf("%s\n", s);
+    free(s);
     return (0);
 }
+
