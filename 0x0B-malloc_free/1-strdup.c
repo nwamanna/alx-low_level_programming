@@ -18,6 +18,5 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 	strcpy(word, str);
-	free(word);
 	return (word);
 }
