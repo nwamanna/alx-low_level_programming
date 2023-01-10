@@ -10,7 +10,6 @@
 */
 char *_strdup(char *str)
 {
-	unsigned int i = 0;
 	int length = strlen(str) + 1;
 	char *word = (char *) malloc(length);
 
