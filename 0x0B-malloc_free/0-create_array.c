@@ -2,16 +2,16 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-*create_array - creates and array of chars and initilaizes it with a specific char
+*create_array - creates and array of chars
 *@size: parameter to be multiplied to get size of bytes
-@c: character
+*@c: character
 *
 *Return: pointer to array or null if it fails
 */
 char *create_array(unsigned int size, char c)
 {
 	unsigned int i = 0;
-	char *arr = (char*) malloc(sizeof(c) * size);
+	char *arr = (char *) malloc(sizeof(c) * size);
 
 	if (arr ==  NULL)
 	{
@@ -23,4 +23,4 @@ char *create_array(unsigned int size, char c)
 		arr[i] = c;
 	}
 	return (arr);
-}	
+}
