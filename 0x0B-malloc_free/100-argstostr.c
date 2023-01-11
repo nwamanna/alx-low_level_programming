@@ -15,12 +15,13 @@ char *argstostr(int ac, char **av)
 	int total_length = 0;
 	char *concatenated_string = malloc(total_length * sizeof(char));
 	int current_index = 0;
+	int i, j;
 
     if (ac == 0 || av == NULL)
 	{
         return NULL;
     }
-    for (int i = 0; i < ac; i++)
+    for (i = 0; i < ac; i++)
 	{
         total_length += strlen(av[i]) + 1;
     }
@@ -28,9 +29,9 @@ char *argstostr(int ac, char **av)
 	{
         return NULL;
     }
-	for (int i = 0; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
-        for (int j = 0; av[i][j] != '\0'; j++)
+        for (j = 0; av[i][j] != '\0'; j++)
 		{
             concatenated_string[current_index++] = av[i][j];
         }
