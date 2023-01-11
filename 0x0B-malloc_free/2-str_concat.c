@@ -1,17 +1,19 @@
 #include <stdio.h>
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 /**
-*_concat - creates and array of chars
+*str_concat - creates and array of chars
 *@s1: parameter to be appended to
 *@s2: string toappend
 *
 *Return: pointer to new allocaated memory or null if it fails
 */
-char *str_concat(char *s1, char *s2);
+char *str_concat(char *s1, char *s2)
 {
-	unsigned int len = strlen(s1) + strlen(s2) + 1;
-	char *arr = (char *) malloc(len);
+	unsigned int len = strlen(s1);
+	unsigned int len2 = strlen(s2) + 1;
+	char *arr = (char *) malloc(len + len2);
 
 	if (s1 == NULL)
 	{
@@ -25,6 +27,7 @@ char *str_concat(char *s1, char *s2);
 	{
 		return (NULL);
 	}
-	arr = strcat(s1,s2);
-	return (arr)
+	memcpy(arr, s1, len);
+	memcpy(arr + len, s2, len2);
+	return (arr);
 }
