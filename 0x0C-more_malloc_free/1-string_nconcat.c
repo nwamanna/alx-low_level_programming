@@ -2,9 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 /**
-*string_nconcat - concatates n amount of bytes to s1 
+*string_nconcat - concatates n amount of bytes to s1
 *@s1: first string
-*@s2: string to be concatated
+*@s2: second string to be appended
+*@n: number of bytes
 *
 *Return: pointer to newly allocated memory
 */
