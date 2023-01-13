@@ -14,19 +14,7 @@ int *array_range(int min, int max)
 	unsigned int cal = (max - min) + 1;
 	int *p;
 
-	if (min == 0)
-	{
-		cal = max - min;
-	}
 	if (min > max)
-	{
-		return (NULL);
-	}
-	if (min == 0 && max == 0)
-	{
-		return (NULL);
-	}
-	if (min < 0 || max < 0)
 	{
 		return (NULL);
 	}
@@ -38,9 +26,7 @@ int *array_range(int min, int max)
 	}
 	for (i = 0; i <= cal; i++)
 	{
-		p[i] = min + i;
+		*(p + 1) = min + i;
 	}
 	return (p);
 }
-
-
