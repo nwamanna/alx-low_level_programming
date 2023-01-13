@@ -10,8 +10,8 @@
 */
 int *array_range(int min, int max)
 {
-	int i;
-	int cal = (max - min) + 1;
+	unsigned int i;
+	unsigned int cal = (max - min) + 1;
 	int *p = malloc(cal * sizeof(int));
 
 	if (min > max)
