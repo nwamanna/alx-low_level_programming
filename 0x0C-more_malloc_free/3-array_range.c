@@ -12,12 +12,26 @@ int *array_range(int min, int max)
 {
 	unsigned int i;
 	unsigned int cal = (max - min) + 1;
-	int *p = malloc(cal * sizeof(int));
+	int *p;
 
+	if (min == 0)
+	{
+		cal = max - min;
+	}
 	if (min > max)
 	{
 		return (NULL);
 	}
+	if (min == 0 && max == 0)
+	{
+		return (NULL);
+	}
+	if (min < 0 || max < 0)
+	{
+		return (NULL);
+	}
+	p = (int *) malloc(cal * sizeof(int));
+
 	if (p == NULL)
 	{
 		return (NULL);
