@@ -13,7 +13,6 @@ int main(int argc, char **argv)
 {
 	int i;
 	long int *p;
-	
 
 	if (!(argc == 3) || argc > 3)
 	{
