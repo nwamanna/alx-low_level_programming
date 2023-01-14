@@ -12,14 +12,15 @@
 int main(int argc, char **argv)
 {
 	int i;
-	int *p;
+	long int *p;
+	
 
 	if (!(argc == 3) || argc > 3)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	p = (int *) malloc(sizeof(int));
+	p = (long int *) malloc(sizeof(long int));
 
 	for (i = 0; i < argc; i++)
 	{
@@ -35,7 +36,7 @@ int main(int argc, char **argv)
 	{
 		exit(98);
 	}
-	printf("%d\n", *p);
+	printf("%ld\n", *p);
 	free(p);
 	return (0);
 }
