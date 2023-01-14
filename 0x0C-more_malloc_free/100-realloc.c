@@ -3,7 +3,7 @@
 #include <string.h>
 /**
 *_realloc - reallocates memory
-*ptr: pointer to old memory size
+*@ptr: pointer to old memory size
 *@old_size: old memory size
 *@new_size: new memory size
 *
@@ -30,23 +30,20 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		if (newptr == NULL)
 		{
 			return (NULL);
+		}
 	}
 	if (new_size > old_size && ptr != NULL)
 	{
-		newptr = malloc(new size);
-	
+		newptr = malloc(new_size);
+	}
 	if (newptr == NULL)
 	{
 		return (newptr);
 	}
 	for (i = 0; i < old_size; i++)
 	{
-		newptr[i] = *(char *)ptr + 1);
+		newptr[i] = *((char *)ptr + 1);
 		free(ptr);
 	}
-	return (newptr
+	return (newptr);
 }
-
-}
-
-
