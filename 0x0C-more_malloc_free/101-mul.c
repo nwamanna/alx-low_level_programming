@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 
 	if (!(argc == 3) || argc > 3)
 	{
-		printf("error\n");
+		printf("Error\n");
 		exit(98);
 	}
 	p = (int *) malloc(sizeof(int));
@@ -25,7 +25,7 @@ int main(int argc, char **argv)
 	{
 		if (isalpha(*argv[i]))
 		{
-			printf("error\n");
+			printf("Error\n");
 			exit(98);
 		}
 	}
