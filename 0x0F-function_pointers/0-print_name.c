@@ -1,3 +1,4 @@
+#include <stdlib.h>
 /**
 *print_name - prints the name
 *@name: name to be printed
