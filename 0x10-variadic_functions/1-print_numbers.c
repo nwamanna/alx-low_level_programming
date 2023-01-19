@@ -1,7 +1,7 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 /**
-*sum_them_all - sums all arguments provided
+*print_numbers - sums all arguments provided
 *@separator: separates numbers
 *@n: const parameter
 *
@@ -18,6 +18,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	else
 	{
 		va_list ptr;
+
 		va_start(ptr, n);
 
 		for (i = 0; i < n ; i++)
