@@ -16,16 +16,19 @@ int int_index(int *array, int size, int (*cmp)(int))
 	}
 	for (i = 0; i < size; i++)
 	{
-		int val = cmp(array[i]);
+		if (array != NULL && cmp != NULL)
+		{
+			int val = cmp(array[i]);
 
-		if (val == 1)
-		{
-			return (i);
-		}
-		else
-		{
-			continue;
-			return (-1);
+			if (val == 1)
+			{
+				return (i);
+			}
+			else
+			{
+				continue;
+				return (-1);
+			}
 		}
 	}
 	return (i);
