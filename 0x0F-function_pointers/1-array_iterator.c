@@ -1,6 +1,6 @@
 #include <stddef.h>
 /**
-*array_iterator - executes a function given as a parameter on each element of an array
+*array_iterator - executes a function
 *@array: array of elements
 *@size: number of elements in an array
 *@action: pointer to function
@@ -9,10 +9,13 @@
 */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	long unsigned int i;
+	unsigned long int i;
 
 	for (i = 0; i < size; i++)
 	{
-		action(array[i]);
+		if (array != NULL && action != NULL)
+		{
+			action(array[i]);
+		}
 	}
 }
