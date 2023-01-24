@@ -1,51 +1,51 @@
-#include <stdarg.h>
 #include "variadic_functions.h"
 /**
 *print_all - prints all arguments
 *@format: list of types of arguments
-*
 *Return: Void
-*/
-/**
-*struct type - struct
-*@letter: letter
-*@place: placeholder
 */
 void print_all(const char * const format, ...)
 {
-	unsigned int i = 0;
-	struct type
-	{ 
-		char *letter;
-		char *place;
-	};
-	struct type list[] = {
-		{"c", "%c"},
-		{"i", "%d"},
-		{"f", "%u"},
-		{"s", "%s"},
-		{NULL, NULL}
-		   		};
 	va_list ptr;
+	const char *word;
 
-	va_start(ptr, format);
-
-	while (i != '0')
+	if (format == NULL)		
+		printf("Error");
+	else
 	{
-		char *cmp = list[i].letter;
-		const char *word = format;
-		char *string = va_arg(ptr, char*);
+		word = format;
 
-		if (string == NULL || format == NULL)
+		va_start(ptr, format);
+		while (*word)
 		{
-			printf("(nil)");
+			char letter = *word;
+			char *string;
+
+			if (letter == 'c')
+				printf("%c", (char)va_arg(ptr, int));
+			else if (letter == 'i')
+				printf("%d", va_arg(ptr, int));
+			else if (letter == 'f')
+				printf("%f", (float)va_arg(ptr, double));
+			else if (letter == 's')
+			{
+				string = va_arg(ptr, char*);
+				if (string == NULL)
+					printf("nil");
+				else
+					printf("%s", string);
+			}
+			else
+			{
+				word++;
+				continue;
+			}
+			word++;
+			if(*word == '\0')
+				break;
+			printf(", ");
 		}
-		if (word == cmp)
-		{
-			printf(list[i].place, string);
-		}
-		i++;
+		va_end(ptr);
+		printf("\n");
 	}
-	va_end(ptr);
-	printf("\n");
 }
