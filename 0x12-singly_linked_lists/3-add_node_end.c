@@ -28,13 +28,13 @@ list_t *add_node_end(list_t **head, const char *str)
 		if (temp == NULL)
 		{
 			free(temp);
-			exit(98);
+			return (NULL);
 		}
 		temp->str = strdup(str);
 		if (temp->str == NULL)
 		{
 			free(temp);
-			exit(98);
+			return (NULL);
 		}
 		temp->len = strlen(str);
 		temp->next = NULL;
