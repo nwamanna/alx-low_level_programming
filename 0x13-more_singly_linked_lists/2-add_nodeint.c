@@ -1,10 +1,10 @@
 #include "lists.h"
 /**
-*add_nodeint - prints elements in a list
-*@h: pointer to the pointer
+*add_nodeint - add node to list
+*@head: pointer to the pointer
 *@n: integer parametre
 *
-*Return: count of nodes in the list
+*Return: new node
 */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
@@ -21,7 +21,6 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	ptr->next = first;
 	first = ptr;
 	*head = ptr;
-	
 	if (first != NULL)
 		return (first);
 	else
