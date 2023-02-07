@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*create_file _ create file
+*create_file - create file
 *@filename: name of file
 *@text_content: content to be written
 *
@@ -9,9 +9,10 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fd, fd2;
+
 	if (filename == NULL)
 		return (-1);
-	fd = open(filename, O_EXCL|O_CREAT|O_RDWR|O_TRUNC, S_IWUSR|S_IRUSR);
+	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, S_IWUSR | S_IRUSR);
 	if (fd == -1)
 		return (-1);
 	if (text_content == NULL)
@@ -26,5 +27,5 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	}
 	close(fd);
-	return(1);
+	return (1);
 }
