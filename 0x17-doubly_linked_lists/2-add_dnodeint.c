@@ -2,7 +2,7 @@
 /**
 *add_dnodeint - adds a node at the beginning of the list
 *@head: pointer to head pointer
-@n: integer data to be inserted
+*@n: integer data to be inserted
 *
 *Return: pointer to new node or NULL if failed
 */
