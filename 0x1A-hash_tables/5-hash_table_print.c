@@ -55,16 +55,6 @@ void hash_table_print(const hash_table_t *ht)
 		ptr = ht->array[i];
 		if (ptr == NULL)
 			continue;
-		while (ptr->next != NULL)
-		{
-			ptr = ptr->next;
-		}
-	}
-	for (i = 0; i < ht->size; i++)
-	{
-		ptr = ht->array[i];
-		if (ptr == NULL)
-			continue;
 		printf("'%s': '%s'", ptr->key, ptr->value);
 		count--;
 		if (count != 0)
