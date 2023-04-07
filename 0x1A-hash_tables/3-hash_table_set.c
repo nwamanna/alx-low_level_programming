@@ -11,10 +11,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *ptr2;
 	unsigned long int index;
 
+	if (ht == NULL || key == NULL || *key == '\0')
+		return(0);
 	if (ptr == NULL)
+	{
+		free(ptr);
 		return (0);
-	if (strlen(key) == 0)
-		return (0);
+	}
 	ptr->key = malloc(strlen(key) + 1);
     ptr->value = malloc(strlen(value) + 1);
 	strcpy(ptr->key, key);
