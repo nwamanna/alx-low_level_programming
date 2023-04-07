@@ -25,7 +25,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	ptr2 = ht->array[index];
 	if (ptr2 == NULL)
 	{
-		ptr2 = ptr;
+		ht->array[index] = ptr;
 		return (1);
 	}
 	while (ptr2 != NULL)
@@ -38,6 +38,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		};
 		ptr2 = ptr2->next;
 	}
-	ptr2->next = ptr;
+	ptr->next = ht->array[index];
+	ht->array[index] = ptr;
 	return (1);
 }
