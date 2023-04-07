@@ -39,7 +39,7 @@ void hash_table_print(const hash_table_t *ht)
 			printf("'%s': '%s'", ptr->key, ptr->value);
 			if (ptr->next == NULL)
 				break;
-			printf(",");
+			printf(", ");
 		}
 	}
 	printf("}\n");
