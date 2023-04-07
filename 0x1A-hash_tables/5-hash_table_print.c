@@ -23,6 +23,11 @@ void hash_table_print(const hash_table_t *ht)
 		if (ptr == NULL)
 			continue;
 		count++;
+		while (ptr->next != NULL)
+		{
+			ptr = ptr->next;
+			count++;
+		}
 	}
 	for (i = 0; i < ht->size; i++)
 	{
@@ -37,7 +42,9 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			ptr = ptr->next;
 			printf("'%s': '%s'", ptr->key, ptr->value);
-			printf(", ");
+			count--;
+			if (count != 0)
+				printf(", ");
 		}
 	}
 	printf("}\n");
