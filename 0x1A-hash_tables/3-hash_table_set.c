@@ -1,6 +1,7 @@
 #include "hash_tables.h"
 /**
 *hash_table_set - adds an element to the hash table
+*@ht: hash table
 *@key: key of value, can't be empty
 *@value: value of key, can e an empty string
 *Return: 1 on success else 0
@@ -12,14 +13,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index;
 
 	if (ht == NULL || key == NULL || *key == '\0')
-		return(0);
+		return (0);
 	if (ptr == NULL)
 	{
 		free(ptr);
 		return (0);
 	}
 	ptr->key = malloc(strlen(key) + 1);
-    ptr->value = malloc(strlen(value) + 1);
+	ptr->value = malloc(strlen(value) + 1);
 	strcpy(ptr->key, key);
 	strcpy(ptr->value, value);
 	ptr->next = NULL;
@@ -33,7 +34,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	while (ptr2 != NULL)
 	{
-		if (strcmp(ptr2->key, key) ==0)
+		if (strcmp(ptr2->key, key) == 0)
 		{
 			free(ptr2->value);
 			strcpy(ptr2->value, value);
